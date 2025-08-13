@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <!-- Define a codificação de caracteres usada na página, no caso UTF-8. -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <!-- Força o IE a usar a versão mais recente do mecanismo de renderização. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- Responsividade para dispositivos móveis. -->
+
+    <title>Meu verão</title> <!--Título do navegador. -->
+
+    <style> 
+        #conteudo {
+            background: #d9aeff;
+            width: 60%;
+            height: 60%;
+            position: fixed;
+            top: 20%;
+            left: 20%;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="conteudo">
+        <h2>Oi meu amor, tudo bem com você?</h2>
+        <button onclick="redirecionar()">SIM</button>
+        <button onclick="nao()">NÃO</button>
+    </div>
+
+    <script> 
+        function redirecionar(){
+            // Se for abrir localmente, mantenha assim; para internet, use um link relativo
+            window.location.href = "pedidonamoro.html";
+        }
+
+        function nao(){
+            alert("Melhoras amor!");
+        }
+    </script>
+</body>
+</html>
