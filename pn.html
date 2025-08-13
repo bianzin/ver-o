@@ -1,64 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-	<meta charset="UTF-8"> 
-	<!-- Define a codificação de caracteres usada na página, no caso, UTF-8.
-✅ Serve para garantir que acentos e caracteres especiais sejam exibidos corretamente (como ç, ã, ê etc).-->
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
-	<meta http-equv="X-UA-Compatible" content="IE=edge"> 
-	<!-- Isso diz para o Internet Explorer usar a versão mais recente de seu mecanismo de renderização disponível.
-✅ Ajuda a evitar que o IE use modos de compatibilidade antigos, que podem quebrar o layout da sua página.-->
-	
-	<meta nane="viewport" content="width=device-width, initial-scale=1.0"> 
-	<!--Essa meta tag é essencial para responsividade.
-✅ Faz com que a página se ajuste corretamente em diferentes tamanhos de tela (celulares, tablets, desktops).-->
+    <title>Pedido de Namoro</title>
 
-<title>Meu verão.</title> <!--Título do navegador. -->
-
+    <style>
+        #conteudo {
+            background: #d9aeff;
+            width: 60%;
+            height: 60%;
+            position: fixed;
+            top: 20%;
+            left: 20%;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
 </head>
-	<div id="conteudo"> <!--O <div> é usado para agrupar elementos dentro de um "bloco". 
-	Ele não altera nada visualmente por si só, mas é essencial para organizar o layout. OU SEJA SEPARAÇÃO.-->
-	<h2>Oi amor! Decidi te fazer essa surpresa e gastei alguns neurônios para isso. hehe.
-        A verdade era que eu tinha programado isso mais pra frente, mas como você disse que não pedi adequadamente "cá" esutou eu para te pedir "formalmente" isso. 
-        Passar os dias ao seu lado tem me feito feliz, tem me deixado alegre e tranquilo a maior parte do tempo, acho que nunca me senti tão bem assim em toda a minha vida. 
-    </h2>
-    <h1>Por isso, gostaria de saber, você quer namorar comigo?</h1><!--Título-->
-	<button onclick="sim()">SIM</button>
-	<button onmouseover="desvia(this)">NÃO</button>
-	</div>
 <body>
+    <div id="conteudo">
+        <h2>
+            Oi amor! Decidi te fazer essa surpresa e gastei alguns neurônios para isso hehe.
+            Eu tinha programado isso mais pra frente, mas como você disse que não pedi adequadamente, "cá" estou eu para pedir formalmente.
+            Passar os dias ao seu lado me faz feliz e tranquilo, acho que nunca me senti tão bem assim.
+        </h2>
 
-	<style> 
-	#conteudo {
-    background: #d9aeff;
-    width: 60%;
-    height: 60%;
-    position: fixed;
-    top: 20%;
-    left: 20%;
-    padding: 10px;
-    text-align: center;
-	</style>
+        <h1>Por isso, gostaria de saber: você quer namorar comigo?</h1>
+
+        <button onclick="sim()">SIM</button>
+        <button onmouseover="desvia(this)">NÃO</button>
+    </div>
+
+    <script>
+        function desvia(t) {
+            var btn = t;
+            btn.style.position = 'absolute';
+            btn.style.bottom = geraPosicao(10, 95);
+            btn.style.left = geraPosicao(0, 94);
+        }
+
+        function sim() {
+            window.location.href = "https://music.youtube.com/playlist?list=PLSVAohX1LOr1syh3weNT-mNCwQc7xZuet";
+        }
+
+        function geraPosicao(min, max) {
+            return (Math.random() * (max - min) + min) + "%";
+        }
+    </script>
 </body>
-
-	<script>
-	function desvia(t){
-		var btn = t;
-		btn.style.position = 'absolute';
-		btn.style.bottom = geraPosicao(10,95);
-		btn.style.left = geraPosicao(0,94);
-		console.log(btn);
-		console.log("opa, desviei...");
-	}
-	function sim(){
-	window.location.href = "https://music.youtube.com/playlist?list=PLSVAohX1LOr1syh3weNT-mNCwQc7xZuet";
-	}
-
-	function geraPosicao(min, max){
-		return (Math.random() * (max-min) + min) +"%";
-	}
-
-	</script>
-
 </html>
